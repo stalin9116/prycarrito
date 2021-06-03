@@ -37,6 +37,7 @@ namespace prycarrito.Public.Login
                     if (infoUsuario != null)
                     {
                         Session["Usuario"] = infoUsuario;
+                        //Response.Redirect("~/Public/Productos/wfmProductoLista.aspx");
                         Response.Redirect("~/Default.aspx");
                     }
                     else

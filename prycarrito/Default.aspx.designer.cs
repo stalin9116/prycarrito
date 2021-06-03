@@ -22,5 +22,14 @@ namespace prycarrito
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRolUsuario;
+
+        /// <summary>
+        /// Control UC_Grid1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::prycarrito.UserControls.ucGrid UC_Grid1;
     }
 }
