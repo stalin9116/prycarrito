@@ -38,5 +38,6 @@ namespace prycarrito.Models
         public virtual DbSet<TBL_ROL> TBL_ROL { get; set; }
         public virtual DbSet<TBL_USUARIO> TBL_USUARIO { get; set; }
 
+
     }
 }

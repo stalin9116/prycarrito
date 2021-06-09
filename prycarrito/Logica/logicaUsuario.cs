@@ -33,6 +33,26 @@ namespace prycarrito.Logica
 
         }
 
+        public static TBL_USUARIO getUserxLogin2(string correo, string password)
+        {
+            try
+            {
+
+                return  dc.TBL_USUARIO.FirstOrDefault(data => data.usu_status == "A"
+                                                                && data.usu_correo.Equals(correo)
+                                                                && data.usu_password.Equals(password));
+                //select * from TBL_USUARIO
+                //where usu_status='A' and usu_correo=@correo
+                //and usu_password=@password
+            }
+            catch (Exception ex)
+            {
+
+                throw new ArgumentException("Error al obtener usuarios");
+            }
+
+        }
+
         public static async Task<List<TBL_USUARIO>> getAllUser2()
         {
             try

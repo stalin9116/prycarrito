@@ -31,10 +31,6 @@
             <tr>
                 <td align="center">
 
-                    <Uc1:UC_Grid ID="UC_Grid1" runat="server"/>
-                    <Uc1:UC_Grid ID="UC_Grid2" runat="server"/>
-
-
                     <asp:GridView ID="gdvDatosProductos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>

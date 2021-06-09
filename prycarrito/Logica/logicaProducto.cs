@@ -54,6 +54,7 @@ namespace prycarrito.Logica
                 dataProducto.pro_status = "A";
                 dataProducto.pro_fechacreacion = DateTime.Now;
                 dc.TBL_PRODUCTO.Add(dataProducto);
+                
 
                 result = await dc.SaveChangesAsync() > 0;
 
