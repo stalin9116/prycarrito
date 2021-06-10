@@ -20,8 +20,8 @@
             </tr>
             <tr>
                 <td>
-                    <asp:ImageButton ID="imgNuevo" runat="server" ImageUrl="~/images/icon_nuevo.png" Width="32px" Height="32px" />
-                    <asp:LinkButton ID="lnkNuevo" runat="server">Nuevo</asp:LinkButton>
+                    <asp:ImageButton ID="imgNuevo" runat="server" ImageUrl="~/images/icon_nuevo.png" Width="32px" Height="32px" OnClick="imgNuevo_Click" />
+                    <asp:LinkButton ID="lnkNuevo" runat="server" OnClick="lnkNuevo_Click">Nuevo</asp:LinkButton>
                 </td>
             </tr>
             <tr>
@@ -31,7 +31,7 @@
             <tr>
                 <td align="center">
 
-                    <asp:GridView ID="gdvDatosProductos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <asp:GridView ID="gdvDatosProductos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="gdvDatosProductos_RowCommand">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField>
@@ -41,7 +41,7 @@
                             </asp:TemplateField>
                              <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="imgEliminar" runat="server" ImageUrl="~/images/icon_delete.png" Width="32px" Height="32px" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>'/>
+                                    <asp:ImageButton ID="imgEliminar" runat="server" ImageUrl="~/images/icon_delete.png" Width="32px" Height="32px" CommandName="Eliminar" CommandArgument='<%#Eval("ID") %>' OnClientClick="return confirm('En realidad dese eliminar el registro jajaja ?')"/>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

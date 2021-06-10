@@ -19,6 +19,17 @@ namespace prycarrito.UserControls
             }
         }
 
+        public DropDownList DropDownList
+        {
+            get {
+                return DropDownList1;
+            }
+
+            set {
+                DropDownList1 = value;
+            }
+        }
+
         private void UcCargar()
         {
             var _taskCategoria = Task.Run(() => Logica.logicaCategoria.getAllCategory());

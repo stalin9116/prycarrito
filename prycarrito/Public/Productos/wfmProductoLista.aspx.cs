@@ -1,4 +1,6 @@
-﻿using System;
+﻿using prycarrito.Logica;
+using prycarrito.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,5 +44,57 @@ namespace prycarrito.Public.Productos
 
         }
 
+        protected void gdvDatosProductos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            string codigo = Convert.ToString(e.CommandArgument);
+            if (e.CommandName == "Modificar")
+            {
+                //Aplicar un metodo de encriptacion para el codigo que se envía por URL 
+                //Encriptar el codigo
+
+                Response.Redirect("wfmProductoNuevo.aspx?cod=" + codigo);
+
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                try
+                {
+                    TBL_PRODUCTO dataProducto = new TBL_PRODUCTO();
+                    var tasProducto = Task.Run(() => logicaProducto.getProductsxId(int.Parse(codigo)));
+                    tasProducto.Wait();
+                    dataProducto = tasProducto.Result;
+                    if (dataProducto != null)
+                    {
+                        var taskDelete = Task.Run(() => logicaProducto.deleteProduct(dataProducto));
+                        taskDelete.Wait();
+                        if (taskDelete.Result)
+                        {
+                            loadProducts();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //Mensaje de error.   
+                }
+
+            }
+
+        }
+
+        private void nuevo()
+        {
+            Response.Redirect("wfmProductoNuevo.aspx");
+        }
+
+        protected void imgNuevo_Click(object sender, ImageClickEventArgs e)
+        {
+            nuevo();
+        }
+
+        protected void lnkNuevo_Click(object sender, EventArgs e)
+        {
+            nuevo();
+        }
     }
 }
