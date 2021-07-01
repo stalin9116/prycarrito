@@ -495,6 +495,8 @@
       <DependentUpon>ModelCarrito.edmx</DependentUpon>
       <LastGenOutput>ModelCarrito.cs</LastGenOutput>
     </Content>
+    <Content Include="Public\Catalogo\wfmCatalogo.aspx" />
+    <Content Include="Public\Catalogo\wfmDetalleProducto.aspx" />
     <Content Include="Public\Login\Login.aspx" />
     <Content Include="Public\Productos\wfmProductoLista.aspx" />
     <Content Include="Public\Productos\wfmProductoNuevo.aspx" />
@@ -646,6 +648,20 @@
       <DependentUpon>ModelCarrito.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Catalogo\wfmCatalogo.aspx.cs">
+      <DependentUpon>wfmCatalogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Catalogo\wfmCatalogo.aspx.designer.cs">
+      <DependentUpon>wfmCatalogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Catalogo\wfmDetalleProducto.aspx.cs">
+      <DependentUpon>wfmDetalleProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Catalogo\wfmDetalleProducto.aspx.designer.cs">
+      <DependentUpon>wfmDetalleProducto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Public\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -705,6 +721,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\product\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

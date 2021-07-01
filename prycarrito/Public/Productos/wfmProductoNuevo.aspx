@@ -26,8 +26,8 @@
                             <asp:LinkButton ID="lnkGuardar" runat="server" OnClick="lnkGuardar_Click"  >Guardar</asp:LinkButton>
                         </td>
                         <td>
-                            <asp:ImageButton ID="ImageRegresar" runat="server" Width="32px" Height="32px" ImageUrl="~/images/regresar.png" OnClick="ImageRegresar_Click" />
-                            <asp:LinkButton ID="lnkRegresar" runat="server" OnClick= "lnkRegresar_Click">Regresar</asp:LinkButton>
+                            <asp:ImageButton ID="ImageRegresar" runat="server" Width="32px" Height="32px" ImageUrl="~/images/regresar.png" CausesValidation="false" OnClick="ImageRegresar_Click" />
+                            <asp:LinkButton ID="lnkRegresar" runat="server" OnClick= "lnkRegresar_Click" CausesValidation="false">Regresar</asp:LinkButton>
                         </td>
                     </tr>
                 </table>
