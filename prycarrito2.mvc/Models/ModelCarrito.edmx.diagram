@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1a3b35a1a4944adb51c508bc6db3958" Name="Diagram1">
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_CATEGORIA" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_CLIENTE" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_DETALLEIMPUESTOS" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_DETALLEPEDIDO" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_DIRECCIONES" Width="1.5" PointX="6" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_FORMAPAGO" Width="1.5" PointX="6" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_IMPUESTOS" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_PAGOS" Width="1.5" PointX="8.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_PEDIDO" Width="1.5" PointX="6" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_PRODUCTO" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_ROL" Width="1.5" PointX="10.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBCARRITOModel.TBL_USUARIO" Width="1.5" PointX="13" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship13" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship15" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship18" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship10" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship19" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship21" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship11" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship8" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship20" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship16" ManuallyRouted="false" />
+        <AssociationConnector Association="DBCARRITOModel.Relationship1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<prycarrito2.mvc.Models.TBL_CLIENTE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table id="myTable" class="table table-condensed">
+
+    <thead>
+        <tr>
+            <th>
+                No.
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_tipoidentificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_fechanacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_celurar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cli_email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @{ int i = 1;}
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @i
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_tipoidentificacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_fechanacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_celurar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cli_email)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.cli_id, identificacion = item.cli_identificacion }) |
+                    @Html.ActionLink("Ver", "Details", new { id = item.cli_id, identificacion = item.cli_identificacion }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.cli_id, identificacion = item.cli_identificacion })
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+
+    </script>
+
+}
