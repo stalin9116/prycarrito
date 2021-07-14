@@ -31,6 +31,7 @@ namespace prycarrito2.mvc.Models
 
         [DisplayName("Tipo")]
         [StringLength(2)]
+        [Required]
         public string cli_tipoidentificacion { get; set; }
         [DisplayName("Apellidos")]
         public string cli_apellidos { get; set; }
@@ -51,9 +52,9 @@ namespace prycarrito2.mvc.Models
         [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage = "Correo Inválido")]
         public string cli_email { get; set; }
         [DisplayName("Estado")]
-        public string cli_status { get; set; }
+        public string cli_status { get; set; } = "A";
         [DisplayName("Fecha Add")]
-        public System.DateTime cli_fechacreacion { get; set; }
+        public System.DateTime cli_fechacreacion { get; set; } = DateTime.Now;
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_DIRECCIONES> TBL_DIRECCIONES { get; set; }
